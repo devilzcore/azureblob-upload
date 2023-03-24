@@ -29,5 +29,20 @@ namespace image_upload.Services
       // Return the URL of the blob
       return blob.Uri.ToString();
     }
+
+    public async Task<Stream?> DownloadFileAsync(string fileName)
+    {
+      CloudBlockBlob blob = _blobContainer.GetBlockBlobReference(fileName);
+      if (!await blob.ExistsAsync())
+      {
+        return null;
+      }
+
+      MemoryStream stream = new MemoryStream();
+      await blob.DownloadToStreamAsync(stream);
+      stream.Seek(0, SeekOrigin.Begin);
+
+      return stream;
+    }
   }
 }

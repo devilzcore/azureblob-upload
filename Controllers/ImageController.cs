@@ -29,5 +29,18 @@ namespace image_upload.Controllers
         return Ok(url);
       }
     }
+
+    [HttpGet("{fileName}")]
+    public async Task<ActionResult<string>> DownloadFile(string fileName)
+    {
+      var fileStream = await _blobStorageService.DownloadFileAsync(fileName);
+
+      if (fileStream == null)
+      {
+        return NotFound();
+      }
+
+      return File(fileStream, "application/octet-stream", fileName);
+    }
   }
 }
