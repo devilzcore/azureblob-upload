@@ -1,4 +1,5 @@
 using image_upload.Services;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,5 +31,11 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(options => options
+  .AllowAnyOrigin()
+  .AllowAnyHeader()
+  .AllowAnyMethod()
+);
 
 app.Run();
