@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "image_upload": {
+    "azureblob_upload": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

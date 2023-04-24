@@ -1,7 +1,7 @@
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 
-namespace image_upload.Services
+namespace azureblob_upload.Services
 {
   public class AzureBlobStorageService
   {

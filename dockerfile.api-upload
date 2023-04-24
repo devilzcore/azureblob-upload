@@ -12,4 +12,4 @@ ENV AzureBlobStorageConnectionString="UseDevelopmentStorage=true"
 
 # EXPOSE 50
 
-ENTRYPOINT ["dotnet", "image-upload.dll"]
+ENTRYPOINT ["dotnet", "azureblob-upload.dll"]

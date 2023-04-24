@@ -1,4 +1,4 @@
-using image_upload.Services;
+using azureblob_upload.Services;
 using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);

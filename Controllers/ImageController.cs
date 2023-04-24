@@ -1,7 +1,7 @@
-using image_upload.Services;
+using azureblob_upload.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace image_upload.Controllers
+namespace azureblob_upload.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
